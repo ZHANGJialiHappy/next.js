@@ -1,9 +1,16 @@
 import Navbar from "./Navbar";
 
-const Layout = ({children}) => {
+type Props = {
+    children?:
+      | React.ReactChild
+      | React.ReactChild[];
+  };
+
+const Layout = ({children}:Props) => {
     return(
         <>
-        <Navbar/> <div>{children}</div>
+        <Navbar/> 
+        <div>{children}</div>
         </>
     )
 };
