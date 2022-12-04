@@ -1,6 +1,12 @@
 import Axios from "axios";
 
-const ProfileList = ({ profile }:any) => {
+type ProfilesProps = {profile:{
+    age: number;
+    count: number;
+    name: string;
+}}
+
+const ProfileList = ({profile}:ProfilesProps) => {
     console.log(profile);
     return (
         <div>
