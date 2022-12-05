@@ -46,7 +46,7 @@ go to app.tsx
 ```shell
 import Layout from "../components/Layout";
 ```
-insert <Layout> in return
+insert Layout component in return
 
 ## Create 404 page
 create a page for 404
