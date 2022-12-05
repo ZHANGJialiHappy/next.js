@@ -6,7 +6,7 @@ type ProfilesProps = {profile:{
     name: string;
 }}
 
-const ProfileList = ({profile}:ProfilesProps) => {
+const ProfileList = ({profile}: ProfilesProps) => {
     console.log(profile);
     return (
         <div>

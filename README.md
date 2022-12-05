@@ -7,6 +7,72 @@ npx create-next-app .
 # or
 yarn create-next-app .
 ```
+## Create pages
+create pages under folder "pages"
+
+## Create a page with [username]
+```shell
+import {useRouter} from "next/router";
+```
+insert the following code in function.
+```shell
+  const router = useRouter();
+  const {usename} = router.query
+```
+
+## Create Navbar
+```shell
+import Link from "next/link";
+```
+insert the following code in Return
+```shell
+  <Link href="/"> Home </Link>
+```
+
+## Create Layout
+```shell
+import Navbar from "./Navbar";
+
+ const Layout = ({children}) => {
+    return (
+        <>
+        <Navbar /> <div> {children} </div>
+        </>
+    )
+}
+```
+
+go to app.tsx
+```shell
+import Layout from "../components/Layout";
+```
+insert <Layout> in return
+
+## Create 404 page
+create a page for 404
+
+## Access data
+```shell
+import Axios from "axios";
+```
+insert the following code
+```shell
+const List=({Data}) => {
+    console.log(Data);
+    return <div> </div>;
+}
+
+export const getStaticProps = async () => {
+    const data = await Axios.get("http:mmmmmmmm");
+
+    return {
+        props: {
+            Data: data.data,
+        },
+    };
+};
+export default List;
+```
 
 ## Getting Started
 
